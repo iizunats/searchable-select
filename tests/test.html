@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>searchable select</title>
+</head>
+<body>
+<div>
+    <div data-searchable-select>
+        <input name="bla" type="search" data-ss-input/>
+        <ul data-ss-list></ul>
+        <template>
+            <li data-ss-list-item></li>
+        </template>
+        <select name="test" data-ss-select>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Mercedes</option>
+            <option value="4">Jaguar</option>
+        </select>
+    </div>
+</div>
+<script src="../bundle.js"></script>
+</body>
+</html>

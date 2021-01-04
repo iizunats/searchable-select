@@ -1,0 +1,40 @@
+{
+  "name": "@iizuna/page-transition",
+  "version": "1.0.0",
+  "description": "Page transition component for the iizuna Framework",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "npm-install": "npm install",
+    "test": "nyc mocha -r ts-node/register -r jsdom-global/register tests/unit/**/*.spec.ts tests/unit/*.spec.ts",
+    "html-test-build": "rollup -c rollup.config.js --no-conflict --environment BUILD:development"
+  },
+  "author": "Tim Rücker",
+  "dependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "iizuna": "^3.5.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "jsdom": "^13.2.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "rollup": "^2.35.1",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.4",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "ts-node": "^7.0.1",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  }
+}
