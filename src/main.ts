@@ -1,4 +1,4 @@
 import {ComponentFactory} from "iizuna";
-import {SearchableSelectComponent} from "./components/searchable-select.component";
+import {SearchableSelectComponent} from "./searchable-select.component";
 
 ComponentFactory.registerComponents([SearchableSelectComponent]);

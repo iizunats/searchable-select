@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>searchable select</title>
+    <style>
+        .is-hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div>
     <div data-searchable-select>
         <input name="bla" type="search" data-ss-input/>
-        <ul data-ss-list></ul>
+        <ul data-ss-list class="is-hidden"></ul>
         <template>
-            <li data-ss-list-item></li>
+            <li data-ss-list-item="${value}">${text}</li>
         </template>
         <select name="test" data-ss-select>
             <option value="1">Audi</option>
             <option value="2">BMW</option>
-            <option value="3">Mercedes</option>
+            <option value="3">Mercedes Benz</option>
             <option value="4">Jaguar</option>
         </select>
     </div>
