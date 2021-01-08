@@ -1,7 +1,7 @@
 {
-  "name": "@iizuna/page-transition",
+  "name": "@iizuna/searchable-select",
   "version": "1.0.0",
-  "description": "Page transition component for the iizuna Framework",
+  "description": "Searchable Select component for the iizuna Framework",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "license": "ISC",
