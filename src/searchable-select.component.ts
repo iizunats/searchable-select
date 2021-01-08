@@ -40,8 +40,11 @@ export class SearchableSelectComponent extends AbstractComponent implements OnRe
     selectItem(document: any, customEvent: any) {
         const split = customEvent.value.split(this.idSeparator);
         if (split[0] === this.internalId) {
+            const select = this.children[SELECT][0] as HTMLSelectElement;
             this.hideList();
-            this.children[SELECT][0].value = split[1];
+            select.value = split[1];
+            // Update the value of the search input
+            this.children[INPUT][0].value = select.selectedOptions[0].label;
         }
     }
 
