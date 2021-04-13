@@ -29,6 +29,9 @@ export class SearchableSelectComponent extends AbstractComponent implements OnRe
     @ElementAttribute()
     private idSeparator = '%';
 
+    @ElementAttribute()
+    public clearOnFocus = true;
+
     onReady(): void {
         const targetSelect = this.children[SELECT][0] as HTMLSelectElement;
         this.selectOptions = targetSelect.options;
@@ -63,7 +66,13 @@ export class SearchableSelectComponent extends AbstractComponent implements OnRe
     }
 
     @EventListener('keyup focus', INPUT)
-    updateList(input: HTMLInputElement) {
+    updateList(input: HTMLInputElement,event:any) {
+        if(event instanceof FocusEvent && this.clearOnFocus){
+            const select = this.children[SELECT][0] as HTMLSelectElement;
+            select.value = '';
+            input.value = '';
+        }
+
         // Filters the OptionsCollection by the given search string
         this.children[LIST][0].innerHTML = this.filterOptionsCollection(formatSearchString(input.value))
             // Map the options into a HTML list element
