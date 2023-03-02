@@ -47,13 +47,13 @@ export class SearchableSelectComponent extends AbstractComponent implements OnRe
             this.hideList();
             select.value = split[1];
             // Update the value of the search input
-            this.children[INPUT][0].value = select.selectedOptions[0].label;
+            (this.children[INPUT][0] as HTMLInputElement).value = select.selectedOptions[0].label;
             if ("createEvent" in document) {
                 const evt = document.createEvent("HTMLEvents");
                 evt.initEvent("change", false, true);
                 this.children[INPUT][0].dispatchEvent(evt);
             } else {
-                this.children[INPUT][0].fireEvent("onchange");
+                (this.children[INPUT][0] as any).fireEvent("onchange");
             }
         }
     }
