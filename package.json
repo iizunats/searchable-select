@@ -12,7 +12,6 @@
   },
   "author": "Tim Rücker",
   "dependencies": {
-    "@types/es6-promise": "^3.3.0",
     "iizuna": "^3.5.0"
   },
   "devDependencies": {
